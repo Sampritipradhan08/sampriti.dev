@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <!-- ═══ META ═══════════════════════════════════════════════════════ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sampriti Pradhan — Creative Full-Stack Web Developer & Canva UI Designer. Specializing in PHP, React, MySQL, Laravel & modern responsive web architecture." />
+  <meta name="keywords" content="Sampriti Pradhan, Web Developer, Canva Designer, PHP, React, Laravel, Machine Learning, Portfolio, Frontend Developer, BCA, CCLMS, MAKAUT" />
+  <meta name="author" content="Sampriti Pradhan" />
+  <meta name="theme-color" content="#080C14" />
+  <title>Sampriti Pradhan — Creative Web Developer &amp; UI Designer</title>
+
+  <!-- ═══ FAVICON ═══════════════════════════════════════════════════ -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+
+  <!-- ═══ FONTS ═════════════════════════════════════════════════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- ═══ EXTERNAL CSS ═══════════════════════════════════════════════ -->
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+  <!-- Custom Stylesheet -->
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       AMBIENT GRADIENT ORBS (Fixed Atmosphere Glow)
+       ═══════════════════════════════════════════════════════════════ -->
+  <div class="orb-container" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       A. FLOATING GLASS ISLAND NAVBAR
+       ═══════════════════════════════════════════════════════════════ -->
+  <nav class="navbar-island" id="navbar" role="navigation" aria-label="Main navigation">
+    <!-- Brand Logo -->
+    <a href="#" class="nav-brand" aria-label="Sampriti Pradhan — Home">&lt;Sampriti.dev /&gt;</a>
+
+    <!-- Navigation Links -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">What I Do</a></li>
+      <li><a href="#skills">Proficiency</a></li>
+      <li><a href="#identity">About &amp; Story</a></li>
+      <li><a href="#work">Repositories</a></li>
+      <li><a href="#contact">Terminal Contact</a></li>
+    </ul>
+
+    <!-- Actions -->
+    <div class="nav-actions">
+      <!-- Theme Toggle Switch -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme" title="Toggle Theme">
+        <i class="bi bi-moon-stars-fill"></i>
+        <i class="bi bi-sun-fill"></i>
+      </button>
+
+      <!-- CTA -->
+      <a href="#contact" class="nav-cta">Let's Talk</a>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="nav-menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       B. HERO SECTION: CINEMATIC CODER HERO + BLENDED PHOTO
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="hero-section" id="hero">
+    
+    <!-- Cinematic Background Photo Layer -->
+    <div class="hero-bg-photo-layer" aria-hidden="true">
+      <img src="me.jpeg" alt="Sampriti Pradhan" class="hero-bg-photo" id="heroPhoto" onerror="this.style.display='none'" />
+      <div class="hero-photo-vignette"></div>
+    </div>
+
+    <div class="container position-relative z-2">
+      <div class="row align-items-center min-vh-100 py-5">
+        
+        <!-- Left Column: Typography & CTAs -->
+        <div class="col-lg-7 col-md-12 pe-lg-4">
+          
+          <!-- Status Indicator -->
+          <div data-aos="fade-down" data-aos-duration="600">
+            <div class="status-badge">
+              <span class="pulse-dot"></span>
+              <code>status: available_for_collaboration</code>
+            </div>
+          </div>
+
+          <!-- Code Overline -->
+          <div class="code-overline mt-3" data-aos="fade-right" data-aos-delay="100">
+            <code>const engineer = <span class="accent-code">"Sampriti Pradhan"</span>;</code>
+          </div>
+
+          <!-- Bold Heading -->
+          <h1 class="hero-heading mt-2" data-aos="fade-up" data-aos-delay="150">
+            Sculpting <span class="gradient-text">Clean Code</span> &amp;<br />
+            Aesthetic <span class="gradient-text">Modern Web.</span>
+          </h1>
+
+          <!-- Sub-narrative -->
+          <p class="hero-narrative" data-aos="fade-up" data-aos-delay="200">
+            A passionate <strong>Creative Web Developer</strong> &amp; <strong>Canva UI Designer</strong>. Pursuing BCA from <em>CCLMS (MAKAUT)</em>. I build high-performance web systems using <strong>PHP, React &amp; MySQL</strong>, while scaling into <strong>Laravel &amp; Machine Learning</strong>.
+          </p>
+
+          <!-- CTAs -->
+          <div class="cta-group" data-aos="fade-up" data-aos-delay="250">
+            <a href="#work" class="btn-magnetic">
+              <i class="bi bi-terminal-fill"></i>
+              Explore Selected Repos
+            </a>
+            <a href="#contact" class="btn-glass">
+              <i class="bi bi-send-fill"></i>
+              Contact Me
+            </a>
+          </div>
+
+          <!-- Social Links Ribbon -->
+          <div class="social-ribbon mt-4" data-aos="fade-up" data-aos-delay="300">
+            <a href="https://github.com" target="_blank" class="social-link" title="GitHub"><i class="bi bi-github"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="social-link" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="mailto:sampritipradhan12345@gmail.com" class="social-link" title="Email"><i class="bi bi-envelope-fill"></i></a>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Interactive Code Terminal Card -->
+        <div class="col-lg-5 col-md-12 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
+          <div class="terminal-card">
+            <div class="terminal-header">
+              <div class="terminal-controls">
+                <span class="ctrl-dot close"></span>
+                <span class="ctrl-dot minimize"></span>
+                <span class="ctrl-dot expand"></span>
+              </div>
+              <span class="terminal-title">sampriti.config.js</span>
+              <span class="terminal-badge">node.js</span>
+            </div>
+            <div class="terminal-body">
+              <pre><code><span class="t-keyword">const</span> <span class="t-var">developer</span> = {
+  <span class="t-key">name</span>: <span class="t-string">'Sampriti Pradhan'</span>,
+  <span class="t-key">education</span>: {
+    <span class="t-key">degree</span>: <span class="t-string">'BCA (Under MAKAUT)'</span>,
+    <span class="t-key">institution</span>: <span class="t-string">'CCLMS, Contai'</span>,
+    <span class="t-key">schooling</span>: <span class="t-string">'Contai Hindu Girls (2024)'</span>
+  },
+  <span class="t-key">skills</span>: [
+    <span class="t-string">'React'</span>, <span class="t-string">'JavaScript'</span>, <span class="t-string">'PHP'</span>,
+    <span class="t-string">'MySQL'</span>, <span class="t-string">'Bootstrap'</span>, <span class="t-string">'Canva Pro'</span>
+  ],
+  <span class="t-key">currentFocus</span>: [
+    <span class="t-string">'Laravel Framework'</span>,
+    <span class="t-string">'Machine Learning'</span>
+  ],
+  <span class="t-key">passion</span>: <span class="t-string">'Aesthetics meets Scalable Logic'</span>
+};</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       C. "WHAT I DO" & PROFICIENCY BARS (DeveloperFolio Style)
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="section-spacing z-1" id="about">
+    <div class="container">
+      
+      <div class="text-center mb-5">
+        <span class="section-label" data-aos="fade-down">
+          <i class="bi bi-cpu-fill"></i> WHAT I DO
+        </span>
+        <h2 class="section-title mx-auto" data-aos="fade-up" data-aos-delay="100">
+          Full-Stack Logic &amp; Creative Design
+        </h2>
+        <p class="section-subtitle mx-auto" data-aos="fade-up" data-aos-delay="150">
+          Building dynamic user experiences from the database layer to pixel-perfect visual branding.
+        </p>
+      </div>
+
+      <!-- Highlight Bullet Items -->
+      <div class="row g-4 mb-5" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-md-4">
+          <div class="feature-bullet-card">
+            <div class="bullet-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+            <h5>Scalable Web Architecture</h5>
+            <p>Architecting database-backed applications with PHP, MySQL, and modern JavaScript for seamless CRUD workflows.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-bullet-card">
+            <div class="bullet-icon"><i class="bi bi-palette-fill"></i></div>
+            <h5>Canva Pro &amp; UI Aesthetics</h5>
+            <p>Designing modern social assets, brand identities, wireframes, and high-converting visual compositions.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-bullet-card">
+            <div class="bullet-icon"><i class="bi bi-terminal-split"></i></div>
+            <h5>Next-Gen Horizons</h5>
+            <p>Expanding backend mastery with Laravel framework and exploring intelligent solutions via Machine Learning.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proficiency Bars (DeveloperFolio Inspired) -->
+      <div class="proficiency-box" id="skills" data-aos="fade-up" data-aos-delay="250">
+        <h4 class="mb-4 text-center"><i class="bi bi-bar-chart-steps me-2"></i>Technical Proficiency Metrics</h4>
+        
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="meter-item">
+              <div class="d-flex justify-content-between mb-2">
+                <span class="meter-name">Frontend Engineering (HTML5, CSS3, JS, React, Bootstrap)</span>
+                <span class="meter-val">88%</span>
+              </div>
+              <div class="meter-track">
+                <div class="meter-fill" style="width: 88%;"></div>
+              </div>
+            </div>
+            <div class="meter-item mt-4">
+              <div class="d-flex justify-content-between mb-2">
+                <span class="meter-name">Canva Pro &amp; UI/UX Visual Branding</span>
+                <span class="meter-val">92%</span>
+              </div>
+              <div class="meter-track">
+                <div class="meter-fill" style="width: 92%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="meter-item">
+              <div class="d-flex justify-content-between mb-2">
+                <span class="meter-name">Backend &amp; Relational Databases (PHP, MySQL)</span>
+                <span class="meter-val">82%</span>
+              </div>
+              <div class="meter-track">
+                <div class="meter-fill" style="width: 82%;"></div>
+              </div>
+            </div>
+            <div class="meter-item mt-4">
+              <div class="d-flex justify-content-between mb-2">
+                <span class="meter-name">Next Horizon (Laravel &amp; Machine Learning)</span>
+                <span class="meter-val">65%</span>
+              </div>
+              <div class="meter-track">
+                <div class="meter-fill" style="width: 65%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       D. BENTO GRID: Multidimensional Identity (WITH PROFILE PHOTO CARD)
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="section-spacing z-1" id="identity">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <span class="section-label" data-aos="fade-down">
+          <i class="bi bi-fingerprint"></i> DNA &amp; IDENTITY
+        </span>
+        <h2 class="section-title mx-auto" data-aos="fade-up" data-aos-delay="100">
+          Multidimensional Profile
+        </h2>
+        <p class="section-subtitle mx-auto" data-aos="fade-up" data-aos-delay="150">
+          A curated snapshot of who I am — projects, passions, academic roots, and continuous learning.
+        </p>
+      </div>
+
+      <!-- Bento Grid -->
+      <div class="bento-grid">
+
+        <!-- Profile Photo & Bio Card -->
+        <div class="bento-card bento-profile-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="profile-card-image-wrap">
+            <img src="me.jpeg" alt="Sampriti Pradhan" class="profile-card-img" />
+            <span class="profile-card-badge">Web Developer &amp; Designer</span>
+          </div>
+          <div class="profile-card-content">
+            <h3>Sampriti Pradhan</h3>
+            <p class="profile-tagline">"Writing clean code by day, sculpting visual identities by night."</p>
+            <div class="profile-pills">
+              <span><i class="bi bi-geo-alt-fill"></i> Contai, WB</span>
+              <span><i class="bi bi-mortarboard-fill"></i> BCA Scholar</span>
+              <span><i class="bi bi-palette-fill"></i> Canva Specialist</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 1: Flagship Project — SheSafe -->
+        <div class="bento-card bento-flagship" data-aos="fade-up" data-aos-delay="150">
+          <div>
+            <div class="bento-icon">
+              <i class="bi bi-shield-lock-fill"></i>
+            </div>
+            <span class="bento-tag">Flagship Build</span>
+            <h3>SheSafe — Women's Safety Platform</h3>
+            <p>
+              A community assistance web app featuring emergency SOS alerts, resource mapping, and secure reporting. Engineered with a robust PHP backend, MySQL architecture, and a mobile-optimized Bootstrap UI.
+            </p>
+          </div>
+          <div class="bento-tech-tags">
+            <span class="bento-tech-tag">PHP</span>
+            <span class="bento-tech-tag">MySQL</span>
+            <span class="bento-tech-tag">Bootstrap 5</span>
+            <span class="bento-tech-tag">JavaScript</span>
+          </div>
+        </div>
+
+        <!-- Block 2: Visual DNA — Canva & UI Design -->
+        <div class="bento-card bento-visual" data-aos="fade-up" data-aos-delay="200">
+          <div class="bento-icon-ring">
+            <i class="bi bi-palette2"></i>
+          </div>
+          <h4>Visual DNA</h4>
+          <p>
+            Canva Pro specialist crafting high-contrast digital identities, social marketing systems, and editorial UI compositions with balance and elegance.
+          </p>
+        </div>
+
+        <!-- Block 3: Future Frontier — Laravel & ML -->
+        <div class="bento-card bento-future" data-aos="fade-up" data-aos-delay="250">
+          <div class="bento-icon-gradient">
+            <i class="bi bi-rocket-takeoff-fill"></i>
+          </div>
+          <h4>Future Frontier</h4>
+          <p>Active learning pathways:</p>
+          <div class="frontier-items">
+            <div class="frontier-item">
+              <i class="bi bi-check-circle-fill"></i>
+              <span>Laravel — Clean MVC architectures</span>
+            </div>
+            <div class="frontier-item">
+              <i class="bi bi-check-circle-fill"></i>
+              <span>Machine Learning — Data models &amp; logic</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 4: Academic Heritage -->
+        <div class="bento-card bento-academic" data-aos="fade-up" data-aos-delay="300">
+          <div class="acad-block">
+            <div class="acad-icon">
+              <i class="bi bi-mortarboard-fill"></i>
+            </div>
+            <div>
+              <h5>Bachelor of Computer Applications (BCA)</h5>
+              <p>
+                Contai College of Learning &amp; Management Science (CCLMS)<br />
+                Affiliated to MAKAUT &nbsp;|&nbsp; <em>Currently Pursuing</em>
+              </p>
+            </div>
+          </div>
+          <div class="acad-divider"></div>
+          <div class="acad-block">
+            <div class="acad-icon">
+              <i class="bi bi-buildings-fill"></i>
+            </div>
+            <div>
+              <h5>Higher Secondary Education</h5>
+              <p>
+                Contai Hindu Girls' School<br />
+                <em>Completed: 2024</em>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.bento-grid -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       E. FEATURED REPOSITORIES (GitHub Card Style Projects)
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="section-spacing z-1" id="work">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <span class="section-label" data-aos="fade-down">
+          <i class="bi bi-journal-code"></i> SELECTED REPOSITORIES
+        </span>
+        <h2 class="section-title mx-auto" data-aos="fade-up" data-aos-delay="100">
+          Featured Projects
+        </h2>
+        <p class="section-subtitle mx-auto" data-aos="fade-up" data-aos-delay="150">
+          Curated digital products engineered with clean architecture and thoughtful user experiences.
+        </p>
+      </div>
+
+      <!-- Project Grid -->
+      <div class="project-grid">
+
+        <!-- Project 1: SheSafe -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-card-header">
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-folder2-open project-folder-icon"></i>
+              <h3 class="repo-title mb-0">SheSafe</h3>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="Source Code"><i class="bi bi-github"></i></a>
+              <a href="#" class="project-link" title="Live Preview"><i class="bi bi-box-arrow-up-right"></i></a>
+            </div>
+          </div>
+          <p class="project-desc">Women's emergency assistance portal with instant reporting, SOS triggers, and safe location directories.</p>
+          <div class="repo-meta">
+            <span class="lang-indicator"><span class="lang-dot php-dot"></span> PHP</span>
+            <span class="lang-indicator"><span class="lang-dot sql-dot"></span> MySQL</span>
+            <span class="lang-indicator"><span class="lang-dot bs-dot"></span> Bootstrap</span>
+          </div>
+        </div>
+
+        <!-- Project 2: ContaiCare -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="project-card-header">
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-folder2-open project-folder-icon"></i>
+              <h3 class="repo-title mb-0">ContaiCare</h3>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="Source Code"><i class="bi bi-github"></i></a>
+              <a href="#" class="project-link" title="Live Preview"><i class="bi bi-box-arrow-up-right"></i></a>
+            </div>
+          </div>
+          <p class="project-desc">Online doctor appointment booking and patient schedule management system designed for Contai clinics.</p>
+          <div class="repo-meta">
+            <span class="lang-indicator"><span class="lang-dot php-dot"></span> PHP</span>
+            <span class="lang-indicator"><span class="lang-dot sql-dot"></span> MySQL</span>
+            <span class="lang-indicator"><span class="lang-dot js-dot"></span> JavaScript</span>
+          </div>
+        </div>
+
+        <!-- Project 3: Mayapur Sattvic Store -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-card-header">
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-folder2-open project-folder-icon"></i>
+              <h3 class="repo-title mb-0">Mayapur Sattvic Store</h3>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="Source Code"><i class="bi bi-github"></i></a>
+              <a href="#" class="project-link" title="Live Preview"><i class="bi bi-box-arrow-up-right"></i></a>
+            </div>
+          </div>
+          <p class="project-desc">Pure sattvic groceries &amp; spiritual merchandise web catalog with dynamic filtering and clean e-commerce UI.</p>
+          <div class="repo-meta">
+            <span class="lang-indicator"><span class="lang-dot php-dot"></span> PHP</span>
+            <span class="lang-indicator"><span class="lang-dot sql-dot"></span> MySQL</span>
+            <span class="lang-indicator"><span class="lang-dot bs-dot"></span> Bootstrap</span>
+          </div>
+        </div>
+
+        <!-- Project 4: Lifeline Blood Donation -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="project-card-header">
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-folder2-open project-folder-icon"></i>
+              <h3 class="repo-title mb-0">Lifeline Blood Donation</h3>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="Source Code"><i class="bi bi-github"></i></a>
+              <a href="#" class="project-link" title="Live Preview"><i class="bi bi-box-arrow-up-right"></i></a>
+            </div>
+          </div>
+          <p class="project-desc">Emergency donor-recipient matchmaking directory reducing critical response time in emergency blood requests.</p>
+          <div class="repo-meta">
+            <span class="lang-indicator"><span class="lang-dot php-dot"></span> PHP</span>
+            <span class="lang-indicator"><span class="lang-dot sql-dot"></span> MySQL</span>
+            <span class="lang-indicator"><span class="lang-dot js-dot"></span> JavaScript</span>
+          </div>
+        </div>
+
+        <!-- Project 5: Jagannath Dham Cafe -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-card-header">
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-folder2-open project-folder-icon"></i>
+              <h3 class="repo-title mb-0">Jagannath Dham Cafe</h3>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="Source Code"><i class="bi bi-github"></i></a>
+              <a href="#" class="project-link" title="Live Preview"><i class="bi bi-box-arrow-up-right"></i></a>
+            </div>
+          </div>
+          <p class="project-desc">Atmospheric hospitality platform featuring custom culinary menu showcases, brand assets, and digital aesthetics.</p>
+          <div class="repo-meta">
+            <span class="lang-indicator"><span class="lang-dot js-dot"></span> HTML/CSS/JS</span>
+            <span class="lang-indicator"><span class="lang-dot bs-dot"></span> Bootstrap</span>
+            <span class="lang-indicator"><span class="lang-dot canva-dot"></span> Canva Assets</span>
+          </div>
+        </div>
+
+      </div><!-- /.project-grid -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       F. TERMINAL CONTACT PORTAL (CONNECTED TO FORMSPREE)
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="section-spacing z-1" id="contact">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <span class="section-label">
+          <i class="bi bi-terminal-dash"></i> REACH OUT
+        </span>
+        <h2 class="section-title mx-auto">
+          Let's Build Together
+        </h2>
+        <p class="section-subtitle mx-auto">
+          Have an exciting project, freelance opportunity, or just want to chat tech?
+        </p>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Left: Info -->
+        <div class="contact-info">
+          <h3>Let's engineer something<br /><span class="gradient-text">exceptional</span>.</h3>
+          <p>
+            Whether you need clean frontend design, full-stack database solutions, or Canva visual assets — drop a message.
+          </p>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><i class="bi bi-envelope-at-fill"></i></div>
+            <a href="mailto:sampritipradhan12345@gmail.com">sampritipradhan12345@gmail.com</a>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><i class="bi bi-geo-alt-fill"></i></div>
+            <span>Contai, West Bengal, India</span>
+          </div>
+
+          <div class="social-links mt-4">
+            <a href="https://github.com" target="_blank" class="social-link" title="GitHub"><i class="bi bi-github"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="social-link" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="mailto:sampritipradhan12345@gmail.com" class="social-link" title="Email"><i class="bi bi-envelope-fill"></i></a>
+          </div>
+        </div>
+
+        <!-- Right: Modern Glass Form (Connected to Formspree) -->
+        <div class="contact-form-card">
+          <form id="contactForm" action="https://formspree.io/f/xnpqldbe" method="POST">
+            <div class="form-group mb-3">
+              <label for="formName">Your Name</label>
+              <input type="text" name="name" class="form-control-custom" id="formName" placeholder="e.g. Aditi Sharma" required />
+            </div>
+            <div class="form-group mb-3">
+              <label for="formEmail">Email Address</label>
+              <input type="email" name="email" class="form-control-custom" id="formEmail" placeholder="e.g. aditi@domain.com" required />
+            </div>
+            <div class="form-group mb-4">
+              <label for="formMessage">Message</label>
+              <textarea name="message" class="form-control-custom" id="formMessage" rows="4" placeholder="Tell me about your vision..." required></textarea>
+            </div>
+            <button type="submit" class="btn-submit w-100">
+              <i class="bi bi-send-fill me-2"></i>
+              Execute Transmission
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════════════ -->
+  <footer class="site-footer z-1">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-brand">&lt;Sampriti.dev /&gt;</span>
+        <span class="footer-copy">
+          &copy; <span id="currentYear">2026</span> Sampriti Pradhan. Built with code &amp; aesthetics.
+        </span>
+        <button class="btn-top" id="btnTop" aria-label="Back to top">
+          <i class="bi bi-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══ SCRIPTS ════════════════════════════════════════════════════ -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
