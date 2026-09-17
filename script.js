@@ -15,6 +15,117 @@
     return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
   }
 
+
+  /* ── SMOOTH PRELOADER WITH MINIMUM DISPLAY TIME ──────────────── */
+  const preloaderStartTime = Date.now();
+  const MIN_DISPLAY_TIME = 1500; // লোডার অন্তত ১.৫ সেকেন্ড স্ক্রিনে থাকবে
+
+  window.addEventListener('load', function () {
+    const preloader = document.getElementById('preloader');
+    if (!preloader) return;
+
+    const elapsedTime = Date.now() - preloaderStartTime;
+    const remainingTime = Math.max(0, MIN_DISPLAY_TIME - elapsedTime);
+
+    // পেজ দ্রুত লোড হলেও বাকি সময়টুকু অপেক্ষা করে স্মুথলি ফেইড হবে
+    setTimeout(() => {
+      preloader.classList.add('fade-out');
+
+      // ট্রানজিশন শেষ হলে DOM থেকে মুছে ফেলা
+      setTimeout(() => {
+        preloader.remove();
+      }, 700);
+    }, remainingTime);
+  });
+
+
+
+/* ── A. TYPEWRITER EFFECT ───────────────────────────────────── */
+  const typewriterElement = document.getElementById('typewriterText');
+  if (typewriterElement) {
+    const roles = [
+      'Creative Web Developer',
+      'UI & Graphic Designer',
+      'Full-Stack Enthusiast',
+      'Problem Solver'
+    ];
+    let roleIdx = 0;
+    let charIdx = 0;
+    let isDeleting = false;
+
+    function typeLoop() {
+      const currentRole = roles[roleIdx];
+
+      if (isDeleting) {
+        typewriterElement.textContent = currentRole.substring(0, charIdx - 1);
+        charIdx--;
+      } else {
+        typewriterElement.textContent = currentRole.substring(0, charIdx + 1);
+        charIdx++;
+      }
+
+      let typingSpeed = isDeleting ? 45 : 85;
+
+      if (!isDeleting && charIdx === currentRole.length) {
+        typingSpeed = 1800; // লেখা শেষ হলে কিছুক্ষণ থামবে
+        isDeleting = true;
+      } else if (isDeleting && charIdx === 0) {
+        isDeleting = false;
+        roleIdx = (roleIdx + 1) % roles.length;
+        typingSpeed = 400; // নতুন শব্দ শুরুর আগে বিরতি
+      }
+
+      setTimeout(typeLoop, typingSpeed);
+    }
+
+    typeLoop();
+  }
+
+  /* ── B. INTERSECTION OBSERVER (SCROLL REVEAL) ──────────────── */
+  const revealElements = document.querySelectorAll('.reveal-on-scroll');
+  if ('IntersectionObserver' in window && revealElements.length > 0) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target); // একবার অ্যানিমেশন হলে আর ট্রিগার হবে না
+        }
+      });
+    }, { threshold: 0.15 });
+
+    revealElements.forEach((el) => revealObserver.observe(el));
+  } else {
+    // ফলব্যাক: ব্রাউজারে সাপোর্ট না থাকলে সরাসরি দৃশ্যমান হবে
+    revealElements.forEach((el) => el.classList.add('revealed'));
+  }
+
+  /* ── C. SCROLL TO TOP CONTROLLER ────────────────────────────── */
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  if (scrollTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        scrollTopBtn.classList.add('show-scroll');
+      } else {
+        scrollTopBtn.classList.remove('show-scroll');
+      }
+    }, { passive: true });
+
+    scrollTopBtn.onclick = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  }
+
+
+
+
+
+
+
+
+
+
+
+
   function applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem(THEME_KEY, theme);
