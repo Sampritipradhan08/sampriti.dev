@@ -16,9 +16,7 @@
   }
 
 
- /* ── SMOOTH PRELOADER WITH FAILSAFE FALLBACK ────────────────── */
-  const preloaderStartTime = Date.now();
-  const MIN_DISPLAY_TIME = 1200; 
+/* ── ULTRA-FAST MOBILE-READY PRELOADER ───────────────────────── */
   let preloaderDismissed = false;
 
   function dismissPreloader() {
@@ -28,23 +26,25 @@
     const preloader = document.getElementById('preloader');
     if (!preloader) return;
 
-    const elapsedTime = Date.now() - preloaderStartTime;
-    const remainingTime = Math.max(0, MIN_DISPLAY_TIME - elapsedTime);
-
+    // মাত্র ৮০০ মিলিসেকেন্ড সুন্দর অ্যানিমেশন দেখিয়েই ফেইড শুরু করবে
     setTimeout(() => {
       preloader.classList.add('fade-out');
       setTimeout(() => {
-        preloader.style.display = 'none'; 
+        preloader.style.display = 'none';
         preloader.remove();
-      }, 700);
-    }, remainingTime);
+      }, 500);
+    }, 700);
   }
 
-  
-  window.addEventListener('load', dismissPreloader);
+  // HTML ডম রেডি হওয়া মাত্রই ফায়ার হবে (ভারী ছবির অপেক্ষায় বসে থাকবে না)
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', dismissPreloader);
+  } else {
+    dismissPreloader();
+  }
 
-  
-  setTimeout(dismissPreloader, 3000);
+  // কোনো কারণে আটকানোর সর্বোচ্চ সীমা মাত্র ১.৫ সেকেন্ড
+  setTimeout(dismissPreloader, 1500);
 
 
 /* ── A. TYPEWRITER EFFECT ───────────────────────────────────── */
