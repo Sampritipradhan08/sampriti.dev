@@ -16,28 +16,35 @@
   }
 
 
-  /* ── SMOOTH PRELOADER WITH MINIMUM DISPLAY TIME ──────────────── */
+ /* ── SMOOTH PRELOADER WITH FAILSAFE FALLBACK ────────────────── */
   const preloaderStartTime = Date.now();
-  const MIN_DISPLAY_TIME = 1500; // লোডার অন্তত ১.৫ সেকেন্ড স্ক্রিনে থাকবে
+  const MIN_DISPLAY_TIME = 1200; 
+  let preloaderDismissed = false;
 
-  window.addEventListener('load', function () {
+  function dismissPreloader() {
+    if (preloaderDismissed) return;
+    preloaderDismissed = true;
+
     const preloader = document.getElementById('preloader');
     if (!preloader) return;
 
     const elapsedTime = Date.now() - preloaderStartTime;
     const remainingTime = Math.max(0, MIN_DISPLAY_TIME - elapsedTime);
 
-    // পেজ দ্রুত লোড হলেও বাকি সময়টুকু অপেক্ষা করে স্মুথলি ফেইড হবে
     setTimeout(() => {
       preloader.classList.add('fade-out');
-
-      // ট্রানজিশন শেষ হলে DOM থেকে মুছে ফেলা
       setTimeout(() => {
+        preloader.style.display = 'none'; 
         preloader.remove();
       }, 700);
     }, remainingTime);
-  });
+  }
 
+  
+  window.addEventListener('load', dismissPreloader);
+
+  
+  setTimeout(dismissPreloader, 3000);
 
 
 /* ── A. TYPEWRITER EFFECT ───────────────────────────────────── */
